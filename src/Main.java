@@ -1,7 +1,8 @@
 import Bouquet.Bouquet;
 import Flowers.Aloe;
 import Flowers.Aster;
-import Flowers.Flower;
+import Flowers.Herbera;
+import Flowers.Rosebud;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,8 @@ public class Main {
         Bouquet bouquet = new Bouquet();
         Aloe aloe = new Aloe();
         Aster aster = new Aster();
+        Rosebud rosebud = new Rosebud();
+        Herbera herbera = new Herbera();
 
         System.out.println("Please choose flowers:" + "\n" +
                 "1:Aloe" + "\n" +
