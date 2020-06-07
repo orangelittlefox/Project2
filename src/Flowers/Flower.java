@@ -6,6 +6,7 @@ public class Flower
   private String name;
   private double price;
 
+
     public String getColor() {
         return color;
     }
@@ -29,4 +30,11 @@ public class Flower
     public void setName(String name) {
         this.name = name;
     }
+
+    public Flower(String color, String name, double price){
+        this.color = color;
+        this.name = name;
+        this.price = price;
+    }
+
 }

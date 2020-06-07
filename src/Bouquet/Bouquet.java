@@ -1,10 +1,15 @@
 package Bouquet;
 
+import Flowers.Flower;
+
 import java.util.Scanner;
 
 public class Bouquet {
-    double[] price = {1.5, 2.5, 3.0, 4.2};
-    String[] name = {"Aloe", "Aster", "Rosebud", "Herbera"};
+   private Flower[] flowersBouquet = {};
+
+    public void setFlowersBouquet(Flower[] flowersBouquet) {
+        this.flowersBouquet = flowersBouquet;
+    }
 
     public void totalPrice() {
         String inputName = "";
@@ -12,9 +17,9 @@ public class Bouquet {
         Scanner in = new Scanner(System.in);
         while (!inputName.equals("q")) {
             inputName = in.nextLine();
-            for (int i = 0; i < name.length; i++) {
-                if (name[i].equals(inputName)) {
-                    total = total + price[i];
+            for (Flower flower : flowersBouquet) {
+                if (flower.getName().equals(inputName)) {
+                    total = total + flower.getPrice();
                 }
             }
         }
