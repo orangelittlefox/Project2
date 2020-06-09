@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
         Bouquet bouquet = new Bouquet();
-        Aloe aloe = new Aloe("Green","Aloe",1.0);
-        Aster aster = new Aster("Violet","Aster",2.0);
-        Rosebud rosebud = new Rosebud("Red","Rosebud",3.0);
-        Herbera herbera = new Herbera("White","Herbera",4.0);
+        Aloe aloe = new Aloe();
+        Aster aster = new Aster();
+        Rosebud rosebud = new Rosebud();
+        Herbera herbera = new Herbera();
 
         Flower[] flowers = {aloe, aster, rosebud, herbera};
 

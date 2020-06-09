@@ -2,7 +2,7 @@ package Flowers;
 
 public class Aloe extends Flower {
 
-    public Aloe(String color, String name, double price) {
-        super(color, name, price);
+    public Aloe() {
+        super("Green", "Aloe", 1.0);
     }
 }
