@@ -2,27 +2,40 @@ package Bouquet;
 
 import Flowers.Flower;
 
-import java.util.Scanner;
+public class Bouquet implements IBouquet {
 
-public class Bouquet {
-   private Flower[] flowersBouquet = {};
+    private Flower[] flowers;
 
-    public void setFlowersBouquet(Flower[] flowersBouquet) {
-        this.flowersBouquet = flowersBouquet;
+    public Bouquet(int count){
+        flowers = new Flower[count];
     }
 
-    public void totalPrice() {
-        String inputName = "";
-        double total = 0;
-        Scanner in = new Scanner(System.in);
-        while (!inputName.equals("q")) {
-            inputName = in.nextLine();
-            for (Flower flower : flowersBouquet) {
-                if (flower.getName().equals(inputName)) {
-                    total = total + flower.getPrice();
-                }
-            }
+    public Flower[] getFlowers(){
+        return this.flowers;
+
+    }
+
+
+    @Override
+    public double getBouquetCost() {
+        double result = 0.0;
+        for(Flower flower : this.flowers) {
+            if (flower != null)
+                result += flower.getPrice();
+            else
+                break;
         }
-        System.out.println(total);
+        return result;
+    }
+
+    @Override
+    public void addFlower(Flower flower) {
+        if(Checker.checkLength(this.flowers)){
+            int position = Checker.getPosition(this.flowers);
+            this.flowers[position]=flower;
+        }
+        else{
+            System.out.println("Error");
+        }
     }
 }

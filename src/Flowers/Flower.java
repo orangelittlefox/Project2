@@ -1,19 +1,9 @@
 package Flowers;
 
-public class Flower
+public abstract class Flower
 {
-  private String color;
   private String name;
   private double price;
-
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
 
     public double getPrice() {
         return price;
@@ -31,8 +21,7 @@ public class Flower
         this.name = name;
     }
 
-    public Flower(String color, String name, double price){
-        this.color = color;
+    public Flower(String name, double price){
         this.name = name;
         this.price = price;
     }

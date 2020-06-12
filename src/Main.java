@@ -1,26 +1,23 @@
 import Bouquet.Bouquet;
+import Bouquet.IBouquet;
 import Flowers.*;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        Bouquet bouquet = new Bouquet();
+        Bouquet bouquet = new Bouquet(4);
         Aloe aloe = new Aloe();
         Aster aster = new Aster();
         Rosebud rosebud = new Rosebud();
         Herbera herbera = new Herbera();
 
-        Flower[] flowers = {aloe, aster, rosebud, herbera};
+        bouquet.addFlower(aloe);
+        bouquet.addFlower(aster);
+        bouquet.addFlower(rosebud);
+        bouquet.addFlower(herbera);
 
-        bouquet.setFlowersBouquet(flowers);
-
-        System.out.println("Please choose flowers:" + "\n" +
-                "1:Aloe" + "\n" +
-                "2:Aster" + "\n" +
-                "3:Rosebud" + "\n" +
-                "4:Herbera" + "\n" +
-                "input name of flower:");
-        bouquet.totalPrice();
+        Printer.print(bouquet.getFlowers());
+        Printer.printPrice(bouquet.getBouquetCost());
     }
 }

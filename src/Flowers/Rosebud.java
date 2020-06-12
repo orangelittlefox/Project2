@@ -2,6 +2,6 @@ package Flowers;
 
 public class Rosebud extends Flower {
     public Rosebud() {
-        super("Red","Rosebud",3.0);
+        super("Rosebud",3.0);
     }
 }
