@@ -1,7 +1,5 @@
 import Flowers.Flower;
 
-import java.util.Arrays;
-
 public class Printer {
 
     public static void print(Flower[] flowers){

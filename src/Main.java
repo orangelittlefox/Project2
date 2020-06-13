@@ -2,7 +2,6 @@ import Bouquet.Bouquet;
 import Bouquet.IBouquet;
 import Flowers.*;
 
-
 public class Main {
     public static void main(String[] args) {
 
@@ -17,7 +16,10 @@ public class Main {
         bouquet.addFlower(rosebud);
         bouquet.addFlower(herbera);
 
-        Printer.print(bouquet.getFlowers());
-        Printer.printPrice(bouquet.getBouquetCost());
+        if (Checker.getPosition(this.flowers) != -1) {
+
+            Printer.print(bouquet.getFlowers());
+            Printer.printPrice(bouquet.getBouquetCost());
+        }
     }
 }

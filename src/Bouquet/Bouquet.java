@@ -30,7 +30,7 @@ public class Bouquet implements IBouquet {
 
     @Override
     public void addFlower(Flower flower) {
-        if(Checker.checkLength(this.flowers)){
+        if(Checker.getPosition(this.flowers)!=-1){
             int position = Checker.getPosition(this.flowers);
             this.flowers[position]=flower;
         }
