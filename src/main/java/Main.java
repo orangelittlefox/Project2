@@ -1,6 +1,10 @@
-import Bouquet.Bouquet;
-import Bouquet.IBouquet;
-import Flowers.*;
+package main.java;
+
+import main.java.bouquet.Bouquet;
+import main.java.flowers.Aloe;
+import main.java.flowers.Aster;
+import main.java.flowers.Herbera;
+import main.java.flowers.Rosebud;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,10 +20,7 @@ public class Main {
         bouquet.addFlower(rosebud);
         bouquet.addFlower(herbera);
 
-        if (Checker.getPosition(this.flowers) != -1) {
-
-            Printer.print(bouquet.getFlowers());
-            Printer.printPrice(bouquet.getBouquetCost());
-        }
+        Printer.print(bouquet.getFlowers());
+        Printer.printPrice(bouquet.getBouquetCost());
     }
 }

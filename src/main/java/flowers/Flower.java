@@ -1,4 +1,4 @@
-package Flowers;
+package main.java.flowers;
 
 public abstract class Flower
 {

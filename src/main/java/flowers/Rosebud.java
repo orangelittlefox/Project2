@@ -1,7 +1,7 @@
-package Flowers;
+package main.java.flowers;
 
 public class Rosebud extends Flower {
     public Rosebud() {
-        super("Rosebud",3.0);
+        super("Rosebud", 3.0);
     }
 }
